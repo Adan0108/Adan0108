@@ -212,9 +212,10 @@ function renderContributionLayers(
   gap,
   graphWidth
 ) {
-  const clipCells = [];
   const backgroundCells = [];
   const contributionCells = [];
+
+  const waveDuration = 10;
 
   weeks.forEach((week, weekIndex) => {
     week.contributionDays.forEach((day) => {
@@ -236,10 +237,6 @@ function renderContributionLayers(
         contributionOpacity[level] ??
         contributionOpacity.NONE;
 
-      /*
-       * Gives different sections of the calendar
-       * different RGB colours.
-       */
       const phase =
         (weekIndex + day.weekday) %
         (rgbColours.length - 1);
@@ -248,22 +245,8 @@ function renderContributionLayers(
         rgbColours[phase];
 
       /*
-       * These rectangles define where the single
-       * travelling wave is allowed to appear.
-       */
-      clipCells.push(`
-        <rect
-          x="${x}"
-          y="${y}"
-          width="${cellSize}"
-          height="${cellSize}"
-          rx="2.5"
-        />
-      `);
-
-      /*
-       * Static background node.
-       * No animation and no blur.
+       * Static background nodes.
+       * These do not animate.
        */
       backgroundCells.push(`
         <rect
@@ -295,10 +278,6 @@ function renderContributionLayers(
           `${day.contributionCount} contribution` +
           `${day.contributionCount === 1 ? "" : "s"}`;
 
-        /*
-         * Real contributions are rendered after
-         * the wave, so the wave cannot cover them.
-         */
         contributionCells.push(`
           <g>
             <title>${escapeXml(title)}</title>
@@ -322,25 +301,26 @@ function renderContributionLayers(
   });
 
   /*
-   * Only this one rectangle is animated.
-   * It moves behind the real contribution nodes.
+   * One travelling rectangle.
+   * transform is generally cheaper than recalculating x.
    */
   const travellingWave = `
-    <g clip-path="url(#contribution-grid-clip)">
+    <g mask="url(#contribution-grid-mask)">
       <rect
         x="-260"
-        y="${top - 5}"
+        y="${top - 4}"
         width="260"
-        height="${7 * (cellSize + gap) + 10}"
+        height="${7 * (cellSize + gap) + 8}"
         fill="url(#rgb-wave-gradient)"
-        opacity="1"
         pointer-events="none"
       >
-        <animate
-          attributeName="x"
-          from="-260"
-          to="${graphWidth + 260}"
-          dur="8s"
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          from="0 0"
+          to="${graphWidth + 520} 0"
+          dur="${waveDuration}s"
           repeatCount="indefinite"
           calcMode="linear"
         />
@@ -349,7 +329,6 @@ function renderContributionLayers(
   `;
 
   return {
-    clipCells: clipCells.join(""),
     backgroundCells: backgroundCells.join(""),
     travellingWave,
     contributionCells: contributionCells.join("")
@@ -490,8 +469,8 @@ function renderSvg(calendar) {
 
   <defs>
     <!--
-      One soft RGB gradient used by the
-      single travelling wave.
+      RGB colour inside the travelling wave.
+      Transparent edges create a soft ripple without blur.
     -->
     <linearGradient
       id="rgb-wave-gradient"
@@ -509,37 +488,37 @@ function renderSvg(calendar) {
       <stop
         offset="18%"
         stop-color="#5b8cff"
-        stop-opacity="0.05"
+        stop-opacity="0.04"
       />
 
       <stop
         offset="34%"
         stop-color="#8b7cff"
-        stop-opacity="0.14"
+        stop-opacity="0.12"
       />
 
       <stop
-        offset="47%"
+        offset="46%"
         stop-color="#c675ff"
-        stop-opacity="0.23"
+        stop-opacity="0.2"
       />
 
       <stop
-        offset="55%"
+        offset="54%"
         stop-color="#ff77b7"
-        stop-opacity="0.28"
+        stop-opacity="0.27"
       />
 
       <stop
         offset="66%"
         stop-color="#62d9c7"
-        stop-opacity="0.2"
+        stop-opacity="0.18"
       />
 
       <stop
         offset="82%"
         stop-color="#55c8ff"
-        stop-opacity="0.08"
+        stop-opacity="0.05"
       />
 
       <stop
@@ -550,12 +529,47 @@ function renderSvg(calendar) {
     </linearGradient>
 
     <!--
-      The wave is clipped so it only appears
-      inside contribution calendar nodes.
+      One reusable contribution-cell pattern.
+      This replaces the previous 367-element clipPath.
     -->
-    <clipPath id="contribution-grid-clip">
-      ${contributionLayers.clipCells}
-    </clipPath>
+    <pattern
+      id="contribution-cell-pattern"
+      x="${left}"
+      y="${top}"
+      width="${cellSize + gap}"
+      height="${cellSize + gap}"
+      patternUnits="userSpaceOnUse"
+    >
+      <rect
+        x="0"
+        y="0"
+        width="${cellSize}"
+        height="${cellSize}"
+        rx="2.5"
+        fill="#ffffff"
+      />
+    </pattern>
+
+    <!--
+      The wave is only visible through the repeated
+      contribution-cell pattern.
+    -->
+    <mask
+      id="contribution-grid-mask"
+      x="${left}"
+      y="${top}"
+      width="${weeks.length * (cellSize + gap)}"
+      height="${7 * (cellSize + gap)}"
+      maskUnits="userSpaceOnUse"
+    >
+      <rect
+        x="${left}"
+        y="${top}"
+        width="${weeks.length * (cellSize + gap)}"
+        height="${7 * (cellSize + gap)}"
+        fill="url(#contribution-cell-pattern)"
+      />
+    </mask>
   </defs>
 
   <rect
