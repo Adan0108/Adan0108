@@ -226,36 +226,60 @@ function renderContributionCells(
       const level =
         day.contributionLevel || "NONE";
 
-      const opacity =
+      const contributionLevelOpacity =
         contributionOpacity[level] ??
         contributionOpacity.NONE;
 
+      const hasContribution =
+        day.contributionCount > 0;
+
       /*
-       * Each cell receives a slightly different phase.
-       * This creates the moving LED effect across the grid.
+       * Each neighbouring node starts with a different
+       * RGB colour to create the LED strip appearance.
        */
       const phase =
         (weekIndex + day.weekday) %
         (rgbColours.length - 1);
 
+      const startingColour =
+        rgbColours[phase];
+
       const colourSequence =
         createColourSequence(phase);
 
       /*
-       * Negative delay means neighbouring cells begin
-       * at different points in the RGB animation.
+       * The delay increases from left to right.
+       * This makes the bright pulse travel across the graph.
        */
       const delay = -(
-        weekIndex * 0.16 +
-        day.weekday * 0.07
+        weekIndex * 0.12 +
+        day.weekday * 0.04
       ).toFixed(2);
 
-      const hasContribution =
-        day.contributionCount > 0;
+      /*
+       * Real commits remain visible even when the
+       * animated RGB pulse is not passing over them.
+       */
+      const baseOpacity = hasContribution
+        ? contributionLevelOpacity
+        : 0.09;
+
+      /*
+       * Commit nodes become brighter than empty nodes.
+       */
+      const pulseOpacity = hasContribution
+        ? Math.min(
+            contributionLevelOpacity + 0.35,
+            1
+          )
+        : 0.3;
 
       const strokeOpacity = hasContribution
-        ? Math.min(opacity + 0.12, 1)
-        : 0.16;
+        ? Math.min(
+            contributionLevelOpacity + 0.18,
+            1
+          )
+        : 0.12;
 
       const filter = hasContribution
         ? 'filter="url(#commit-glow)"'
@@ -270,26 +294,55 @@ function renderContributionCells(
         <g>
           <title>${escapeXml(title)}</title>
 
+          <!-- Permanent base node -->
           <rect
             x="${x}"
             y="${y}"
             width="${cellSize}"
             height="${cellSize}"
             rx="2.5"
-            fill="${rgbColours[phase]}"
-            fill-opacity="${opacity}"
+            fill="${startingColour}"
+            fill-opacity="${baseOpacity}"
             stroke="#ffffff"
             stroke-opacity="${strokeOpacity}"
-            stroke-width="${hasContribution ? 0.75 : 0.35}"
+            stroke-width="${hasContribution ? 0.7 : 0.3}"
+          />
+
+          <!-- Animated RGB LED layer -->
+          <rect
+            x="${x}"
+            y="${y}"
+            width="${cellSize}"
+            height="${cellSize}"
+            rx="2.5"
+            fill="${startingColour}"
+            opacity="${baseOpacity}"
+            pointer-events="none"
             ${filter}
           >
+            <!-- Each node transitions through RGB colours -->
             <animate
               attributeName="fill"
               values="${colourSequence}"
-              dur="11s"
+              dur="4.8s"
               begin="${delay}s"
               repeatCount="indefinite"
               calcMode="linear"
+            />
+
+            <!-- Brightness pulse moves from left to right -->
+            <animate
+              attributeName="opacity"
+              values="${baseOpacity};${pulseOpacity};${baseOpacity}"
+              keyTimes="0;0.5;1"
+              dur="4.8s"
+              begin="${delay}s"
+              repeatCount="indefinite"
+              calcMode="spline"
+              keySplines="
+                0.42 0 0.58 1;
+                0.42 0 0.58 1
+              "
             />
           </rect>
         </g>
