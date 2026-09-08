@@ -213,6 +213,12 @@ function renderContributionCells(
 ) {
   const cells = [];
 
+  /*
+   * Duration of one complete wave moving
+   * across the contribution calendar.
+   */
+  const waveDuration = 14;
+
   weeks.forEach((week, weekIndex) => {
     week.contributionDays.forEach((day) => {
       const x =
@@ -226,64 +232,70 @@ function renderContributionCells(
       const level =
         day.contributionLevel || "NONE";
 
+      const hasContribution =
+        day.contributionCount > 0;
+
       const contributionLevelOpacity =
         contributionOpacity[level] ??
         contributionOpacity.NONE;
 
-      const hasContribution =
-        day.contributionCount > 0;
-
       /*
-       * Each neighbouring node starts with a different
-       * RGB colour to create the LED strip appearance.
+       * Each column receives a different RGB colour.
+       * The wave reveals these colours while travelling.
        */
       const phase =
         (weekIndex + day.weekday) %
         (rgbColours.length - 1);
 
-      const startingColour =
+      const nodeColour =
         rgbColours[phase];
 
-      const colourSequence =
-        createColourSequence(phase);
+      /*
+       * Columns are delayed progressively so that
+       * the pulse appears to travel horizontally.
+       *
+       * All seven nodes in one week use almost the
+       * same delay, forming a vertical wave band.
+       */
+      const waveDelay = -(
+        weekIndex * 0.22 +
+        day.weekday * 0.015
+      ).toFixed(3);
 
       /*
-       * The delay increases from left to right.
-       * This makes the bright pulse travel across the graph.
+       * Empty nodes remain extremely subtle.
        */
-      const delay = -(
-        weekIndex * 0.12 +
-        day.weekday * 0.04
-      ).toFixed(2);
+      const emptyNodeOpacity = 0.07;
 
       /*
-       * Real commits remain visible even when the
-       * animated RGB pulse is not passing over them.
+       * Wave opacity is intentionally lower than
+       * every real contribution node.
        */
-      const baseOpacity = hasContribution
-        ? contributionLevelOpacity
-        : 0.09;
+      const waveMinimumOpacity = 0.015;
+      const waveOuterOpacity = 0.08;
+      const waveMiddleOpacity = 0.17;
+      const wavePeakOpacity = 0.28;
 
       /*
-       * Commit nodes become brighter than empty nodes.
+       * Real contribution brightness.
+       * The minimum real contribution is brighter
+       * than the maximum wave opacity of 0.28.
        */
-      const pulseOpacity = hasContribution
-        ? Math.min(
-            contributionLevelOpacity + 0.35,
+      const contributionNodeOpacity =
+        hasContribution
+          ? Math.max(
+            contributionLevelOpacity,
+            0.5
+          )
+          : emptyNodeOpacity;
+
+      const contributionStrokeOpacity =
+        hasContribution
+          ? Math.min(
+            contributionNodeOpacity + 0.18,
             1
           )
-        : 0.3;
-
-      const strokeOpacity = hasContribution
-        ? Math.min(
-            contributionLevelOpacity + 0.18,
-            1
-          )
-        : 0.12;
-
-      const filter = hasContribution
-        ? 'filter="url(#commit-glow)"'
-        : "";
+          : 0.1;
 
       const title =
         `${day.date}: ` +
@@ -294,57 +306,96 @@ function renderContributionCells(
         <g>
           <title>${escapeXml(title)}</title>
 
-          <!-- Permanent base node -->
+          <!--
+            Layer 1: subtle permanent background.
+            Empty contribution nodes remain visible.
+          -->
           <rect
             x="${x}"
             y="${y}"
             width="${cellSize}"
             height="${cellSize}"
             rx="2.5"
-            fill="${startingColour}"
-            fill-opacity="${baseOpacity}"
-            stroke="#ffffff"
-            stroke-opacity="${strokeOpacity}"
-            stroke-width="${hasContribution ? 0.7 : 0.3}"
+            fill="#30363d"
+            fill-opacity="${emptyNodeOpacity}"
+            stroke="#8b949e"
+            stroke-opacity="0.1"
+            stroke-width="0.35"
           />
 
-          <!-- Animated RGB LED layer -->
+          <!--
+            Layer 2: travelling RGB wave.
+
+            The opacity pattern creates:
+            dim → outer wave → middle wave →
+            bright centre → middle wave → outer wave → dim
+          -->
           <rect
             x="${x}"
             y="${y}"
             width="${cellSize}"
             height="${cellSize}"
             rx="2.5"
-            fill="${startingColour}"
-            opacity="${baseOpacity}"
+            fill="${nodeColour}"
+            opacity="${waveMinimumOpacity}"
             pointer-events="none"
-            ${filter}
+            filter="url(#wave-glow)"
           >
-            <!-- Each node transitions through RGB colours -->
             <animate
-              attributeName="fill"
-              values="${colourSequence}"
-              dur="4.8s"
-              begin="${delay}s"
+              attributeName="opacity"
+              values="
+                ${waveMinimumOpacity};
+                ${waveMinimumOpacity};
+                ${waveOuterOpacity};
+                ${waveMiddleOpacity};
+                ${wavePeakOpacity};
+                ${waveMiddleOpacity};
+                ${waveOuterOpacity};
+                ${waveMinimumOpacity};
+                ${waveMinimumOpacity}
+              "
+              keyTimes="
+                0;
+                0.28;
+                0.36;
+                0.43;
+                0.5;
+                0.57;
+                0.64;
+                0.72;
+                1
+              "
+              dur="${waveDuration}s"
+              begin="${waveDelay}s"
               repeatCount="indefinite"
               calcMode="linear"
             />
-
-            <!-- Brightness pulse moves from left to right -->
-            <animate
-              attributeName="opacity"
-              values="${baseOpacity};${pulseOpacity};${baseOpacity}"
-              keyTimes="0;0.5;1"
-              dur="4.8s"
-              begin="${delay}s"
-              repeatCount="indefinite"
-              calcMode="spline"
-              keySplines="
-                0.42 0 0.58 1;
-                0.42 0 0.58 1
-              "
-            />
           </rect>
+
+          ${hasContribution
+          ? `
+          <!--
+            Layer 3: real contribution node.
+
+            This layer is rendered after the wave,
+            so the wave can never cover the real commit.
+          -->
+          <rect
+            x="${x}"
+            y="${y}"
+            width="${cellSize}"
+            height="${cellSize}"
+            rx="2.5"
+            fill="${nodeColour}"
+            fill-opacity="${contributionNodeOpacity}"
+            stroke="#ffffff"
+            stroke-opacity="${contributionStrokeOpacity}"
+            stroke-width="0.75"
+            filter="url(#commit-glow)"
+          />
+          `
+          : ""
+        }
         </g>
       `);
     });
@@ -484,6 +535,26 @@ function renderSvg(calendar) {
   </desc>
 
   <defs>
+    <!-- Soft glow for the travelling wave -->
+    <filter
+      id="wave-glow"
+      x="-100%"
+      y="-100%"
+      width="300%"
+      height="300%"
+    >
+      <feGaussianBlur
+        stdDeviation="1.7"
+        result="waveBlur"
+      />
+
+      <feMerge>
+        <feMergeNode in="waveBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Slightly stronger glow for real commits -->
     <filter
       id="commit-glow"
       x="-100%"
@@ -492,12 +563,12 @@ function renderSvg(calendar) {
       height="300%"
     >
       <feGaussianBlur
-        stdDeviation="1.15"
-        result="blur"
+        stdDeviation="1.05"
+        result="commitBlur"
       />
 
       <feMerge>
-        <feMergeNode in="blur" />
+        <feMergeNode in="commitBlur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
