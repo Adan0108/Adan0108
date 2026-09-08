@@ -204,20 +204,17 @@ function renderWeekdayLabels(
     .join("");
 }
 
-function renderContributionCells(
+function renderContributionLayers(
   weeks,
   left,
   top,
   cellSize,
-  gap
+  gap,
+  graphWidth
 ) {
-  const cells = [];
-
-  /*
-   * Duration of one complete wave moving
-   * across the contribution calendar.
-   */
-  const waveDuration = 14;
+  const clipCells = [];
+  const backgroundCells = [];
+  const contributionCells = [];
 
   weeks.forEach((week, weekIndex) => {
     week.contributionDays.forEach((day) => {
@@ -235,13 +232,13 @@ function renderContributionCells(
       const hasContribution =
         day.contributionCount > 0;
 
-      const contributionLevelOpacity =
+      const levelOpacity =
         contributionOpacity[level] ??
         contributionOpacity.NONE;
 
       /*
-       * Each column receives a different RGB colour.
-       * The wave reveals these colours while travelling.
+       * Gives different sections of the calendar
+       * different RGB colours.
        */
       const phase =
         (weekIndex + day.weekday) %
@@ -251,157 +248,112 @@ function renderContributionCells(
         rgbColours[phase];
 
       /*
-       * Columns are delayed progressively so that
-       * the pulse appears to travel horizontally.
-       *
-       * All seven nodes in one week use almost the
-       * same delay, forming a vertical wave band.
+       * These rectangles define where the single
+       * travelling wave is allowed to appear.
        */
-      const waveDelay = -(
-        weekIndex * 0.22 +
-        day.weekday * 0.015
-      ).toFixed(3);
-
-      /*
-       * Empty nodes remain extremely subtle.
-       */
-      const emptyNodeOpacity = 0.07;
-
-      /*
-       * Wave opacity is intentionally lower than
-       * every real contribution node.
-       */
-      const waveMinimumOpacity = 0.015;
-      const waveOuterOpacity = 0.08;
-      const waveMiddleOpacity = 0.17;
-      const wavePeakOpacity = 0.28;
-
-      /*
-       * Real contribution brightness.
-       * The minimum real contribution is brighter
-       * than the maximum wave opacity of 0.28.
-       */
-      const contributionNodeOpacity =
-        hasContribution
-          ? Math.max(
-            contributionLevelOpacity,
-            0.5
-          )
-          : emptyNodeOpacity;
-
-      const contributionStrokeOpacity =
-        hasContribution
-          ? Math.min(
-            contributionNodeOpacity + 0.18,
-            1
-          )
-          : 0.1;
-
-      const title =
-        `${day.date}: ` +
-        `${day.contributionCount} contribution` +
-        `${day.contributionCount === 1 ? "" : "s"}`;
-
-      cells.push(`
-        <g>
-          <title>${escapeXml(title)}</title>
-
-          <!--
-            Layer 1: subtle permanent background.
-            Empty contribution nodes remain visible.
-          -->
-          <rect
-            x="${x}"
-            y="${y}"
-            width="${cellSize}"
-            height="${cellSize}"
-            rx="2.5"
-            fill="#30363d"
-            fill-opacity="${emptyNodeOpacity}"
-            stroke="#8b949e"
-            stroke-opacity="0.1"
-            stroke-width="0.35"
-          />
-
-          <!--
-            Layer 2: travelling RGB wave.
-
-            The opacity pattern creates:
-            dim → outer wave → middle wave →
-            bright centre → middle wave → outer wave → dim
-          -->
-          <rect
-            x="${x}"
-            y="${y}"
-            width="${cellSize}"
-            height="${cellSize}"
-            rx="2.5"
-            fill="${nodeColour}"
-            opacity="${waveMinimumOpacity}"
-            pointer-events="none"
-            filter="url(#wave-glow)"
-          >
-            <animate
-              attributeName="opacity"
-              values="
-                ${waveMinimumOpacity};
-                ${waveMinimumOpacity};
-                ${waveOuterOpacity};
-                ${waveMiddleOpacity};
-                ${wavePeakOpacity};
-                ${waveMiddleOpacity};
-                ${waveOuterOpacity};
-                ${waveMinimumOpacity};
-                ${waveMinimumOpacity}
-              "
-              keyTimes="
-                0;
-                0.28;
-                0.36;
-                0.43;
-                0.5;
-                0.57;
-                0.64;
-                0.72;
-                1
-              "
-              dur="${waveDuration}s"
-              begin="${waveDelay}s"
-              repeatCount="indefinite"
-              calcMode="linear"
-            />
-          </rect>
-
-          ${hasContribution
-          ? `
-          <!--
-            Layer 3: real contribution node.
-
-            This layer is rendered after the wave,
-            so the wave can never cover the real commit.
-          -->
-          <rect
-            x="${x}"
-            y="${y}"
-            width="${cellSize}"
-            height="${cellSize}"
-            rx="2.5"
-            fill="${nodeColour}"
-            fill-opacity="${contributionNodeOpacity}"
-            stroke="#ffffff"
-            stroke-opacity="${contributionStrokeOpacity}"
-            stroke-width="0.75"
-            filter="url(#commit-glow)"
-          />
-          `
-          : ""
-        }
-        </g>
+      clipCells.push(`
+        <rect
+          x="${x}"
+          y="${y}"
+          width="${cellSize}"
+          height="${cellSize}"
+          rx="2.5"
+        />
       `);
+
+      /*
+       * Static background node.
+       * No animation and no blur.
+       */
+      backgroundCells.push(`
+        <rect
+          x="${x}"
+          y="${y}"
+          width="${cellSize}"
+          height="${cellSize}"
+          rx="2.5"
+          fill="#30363d"
+          fill-opacity="0.13"
+          stroke="#8b949e"
+          stroke-opacity="0.14"
+          stroke-width="0.35"
+        />
+      `);
+
+      if (hasContribution) {
+        const contributionOpacityValue =
+          Math.max(levelOpacity, 0.5);
+
+        const strokeOpacity =
+          Math.min(
+            contributionOpacityValue + 0.18,
+            1
+          );
+
+        const title =
+          `${day.date}: ` +
+          `${day.contributionCount} contribution` +
+          `${day.contributionCount === 1 ? "" : "s"}`;
+
+        /*
+         * Real contributions are rendered after
+         * the wave, so the wave cannot cover them.
+         */
+        contributionCells.push(`
+          <g>
+            <title>${escapeXml(title)}</title>
+
+            <rect
+              x="${x}"
+              y="${y}"
+              width="${cellSize}"
+              height="${cellSize}"
+              rx="2.5"
+              fill="${nodeColour}"
+              fill-opacity="${contributionOpacityValue}"
+              stroke="#ffffff"
+              stroke-opacity="${strokeOpacity}"
+              stroke-width="0.7"
+            />
+          </g>
+        `);
+      }
     });
   });
 
-  return cells.join("");
+  /*
+   * Only this one rectangle is animated.
+   * It moves behind the real contribution nodes.
+   */
+  const travellingWave = `
+    <g clip-path="url(#contribution-grid-clip)">
+      <rect
+        x="-260"
+        y="${top - 5}"
+        width="260"
+        height="${7 * (cellSize + gap) + 10}"
+        fill="url(#rgb-wave-gradient)"
+        opacity="1"
+        pointer-events="none"
+      >
+        <animate
+          attributeName="x"
+          from="-260"
+          to="${graphWidth + 260}"
+          dur="8s"
+          repeatCount="indefinite"
+          calcMode="linear"
+        />
+      </rect>
+    </g>
+  `;
+
+  return {
+    clipCells: clipCells.join(""),
+    backgroundCells: backgroundCells.join(""),
+    travellingWave,
+    contributionCells: contributionCells.join("")
+  };
 }
 
 function renderLegend(width) {
@@ -504,13 +456,15 @@ function renderSvg(calendar) {
     gap
   );
 
-  const cells = renderContributionCells(
-    weeks,
-    left,
-    top,
-    cellSize,
-    gap
-  );
+  const contributionLayers =
+    renderContributionLayers(
+      weeks,
+      left,
+      top,
+      cellSize,
+      gap,
+      width
+    );
 
   const legend = renderLegend(width);
 
@@ -535,43 +489,73 @@ function renderSvg(calendar) {
   </desc>
 
   <defs>
-    <!-- Soft glow for the travelling wave -->
-    <filter
-      id="wave-glow"
-      x="-100%"
-      y="-100%"
-      width="300%"
-      height="300%"
+    <!--
+      One soft RGB gradient used by the
+      single travelling wave.
+    -->
+    <linearGradient
+      id="rgb-wave-gradient"
+      x1="0%"
+      y1="0%"
+      x2="100%"
+      y2="0%"
     >
-      <feGaussianBlur
-        stdDeviation="1.7"
-        result="waveBlur"
+      <stop
+        offset="0%"
+        stop-color="#5b8cff"
+        stop-opacity="0"
       />
 
-      <feMerge>
-        <feMergeNode in="waveBlur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-
-    <!-- Slightly stronger glow for real commits -->
-    <filter
-      id="commit-glow"
-      x="-100%"
-      y="-100%"
-      width="300%"
-      height="300%"
-    >
-      <feGaussianBlur
-        stdDeviation="1.05"
-        result="commitBlur"
+      <stop
+        offset="18%"
+        stop-color="#5b8cff"
+        stop-opacity="0.05"
       />
 
-      <feMerge>
-        <feMergeNode in="commitBlur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+      <stop
+        offset="34%"
+        stop-color="#8b7cff"
+        stop-opacity="0.14"
+      />
+
+      <stop
+        offset="47%"
+        stop-color="#c675ff"
+        stop-opacity="0.23"
+      />
+
+      <stop
+        offset="55%"
+        stop-color="#ff77b7"
+        stop-opacity="0.28"
+      />
+
+      <stop
+        offset="66%"
+        stop-color="#62d9c7"
+        stop-opacity="0.2"
+      />
+
+      <stop
+        offset="82%"
+        stop-color="#55c8ff"
+        stop-opacity="0.08"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#55c8ff"
+        stop-opacity="0"
+      />
+    </linearGradient>
+
+    <!--
+      The wave is clipped so it only appears
+      inside contribution calendar nodes.
+    -->
+    <clipPath id="contribution-grid-clip">
+      ${contributionLayers.clipCells}
+    </clipPath>
   </defs>
 
   <rect
@@ -603,9 +587,18 @@ function renderSvg(calendar) {
     ${weekdayLabels}
   </g>
 
-  <g shape-rendering="geometricPrecision">
-    ${cells}
-  </g>
+  <!-- Layer 1: static empty-node background -->
+    <g shape-rendering="geometricPrecision">
+      ${contributionLayers.backgroundCells}
+    </g>
+
+    <!-- Layer 2: one travelling RGB wave -->
+    ${contributionLayers.travellingWave}
+
+    <!-- Layer 3: real contributions remain on top -->
+    <g shape-rendering="geometricPrecision">
+      ${contributionLayers.contributionCells}
+    </g>
 
   <g
     font-family="Segoe UI, Inter, Arial, sans-serif"
