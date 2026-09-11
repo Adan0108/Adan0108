@@ -140,7 +140,7 @@
     font-size="15"
     font-weight="600"
   >
-    127 contributions in the last year
+    177 contributions in the last year
   </text>
 
   <g
@@ -5028,6 +5028,19 @@
           stroke-width="0.35"
         />
       
+        <rect
+          x="828"
+          y="126"
+          width="11"
+          height="11"
+          rx="2.5"
+          fill="#30363d"
+          fill-opacity="0.13"
+          stroke="#8b949e"
+          stroke-opacity="0.14"
+          stroke-width="0.35"
+        />
+      
     </g>
 
     <!-- Layer 2: one travelling RGB wave -->
@@ -5068,7 +5081,7 @@
               height="11"
               rx="2.5"
               fill="#55c8ff"
-              fill-opacity="0.84"
+              fill-opacity="1"
               stroke="#ffffff"
               stroke-opacity="1"
               stroke-width="0.7"
@@ -5085,9 +5098,9 @@
               height="11"
               rx="2.5"
               fill="#8b7cff"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5136,9 +5149,9 @@
               height="11"
               rx="2.5"
               fill="#ff77b7"
-              fill-opacity="0.68"
+              fill-opacity="0.84"
               stroke="#ffffff"
-              stroke-opacity="0.8600000000000001"
+              stroke-opacity="1"
               stroke-width="0.7"
             />
           </g>
@@ -5187,9 +5200,9 @@
               height="11"
               rx="2.5"
               fill="#ff77b7"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5204,9 +5217,9 @@
               height="11"
               rx="2.5"
               fill="#ff8674"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5289,9 +5302,9 @@
               height="11"
               rx="2.5"
               fill="#ffd166"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5323,9 +5336,9 @@
               height="11"
               rx="2.5"
               fill="#8b7cff"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5408,7 +5421,7 @@
               height="11"
               rx="2.5"
               fill="#5b8cff"
-              fill-opacity="0.84"
+              fill-opacity="1"
               stroke="#ffffff"
               stroke-opacity="1"
               stroke-width="0.7"
@@ -5425,9 +5438,9 @@
               height="11"
               rx="2.5"
               fill="#8b7cff"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5442,9 +5455,9 @@
               height="11"
               rx="2.5"
               fill="#5b8cff"
-              fill-opacity="0.68"
+              fill-opacity="1"
               stroke="#ffffff"
-              stroke-opacity="0.8600000000000001"
+              stroke-opacity="1"
               stroke-width="0.7"
             />
           </g>
@@ -5459,9 +5472,9 @@
               height="11"
               rx="2.5"
               fill="#8b7cff"
-              fill-opacity="0.68"
+              fill-opacity="0.84"
               stroke="#ffffff"
-              stroke-opacity="0.8600000000000001"
+              stroke-opacity="1"
               stroke-width="0.7"
             />
           </g>
@@ -5476,9 +5489,9 @@
               height="11"
               rx="2.5"
               fill="#c675ff"
-              fill-opacity="0.68"
+              fill-opacity="0.84"
               stroke="#ffffff"
-              stroke-opacity="0.8600000000000001"
+              stroke-opacity="1"
               stroke-width="0.7"
             />
           </g>
@@ -5493,9 +5506,9 @@
               height="11"
               rx="2.5"
               fill="#ff8674"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5510,9 +5523,9 @@
               height="11"
               rx="2.5"
               fill="#ffd166"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5527,9 +5540,9 @@
               height="11"
               rx="2.5"
               fill="#c675ff"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5544,9 +5557,9 @@
               height="11"
               rx="2.5"
               fill="#ffd166"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5561,9 +5574,9 @@
               height="11"
               rx="2.5"
               fill="#ff77b7"
-              fill-opacity="0.68"
+              fill-opacity="1"
               stroke="#ffffff"
-              stroke-opacity="0.8600000000000001"
+              stroke-opacity="1"
               stroke-width="0.7"
             />
           </g>
@@ -5578,9 +5591,9 @@
               height="11"
               rx="2.5"
               fill="#ff8674"
-              fill-opacity="0.68"
+              fill-opacity="1"
               stroke="#ffffff"
-              stroke-opacity="0.8600000000000001"
+              stroke-opacity="1"
               stroke-width="0.7"
             />
           </g>
@@ -5595,9 +5608,9 @@
               height="11"
               rx="2.5"
               fill="#ffd166"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5612,9 +5625,9 @@
               height="11"
               rx="2.5"
               fill="#ff8674"
-              fill-opacity="0.68"
+              fill-opacity="0.84"
               stroke="#ffffff"
-              stroke-opacity="0.8600000000000001"
+              stroke-opacity="1"
               stroke-width="0.7"
             />
           </g>
@@ -5646,6 +5659,23 @@
               height="11"
               rx="2.5"
               fill="#62d9c7"
+              fill-opacity="0.68"
+              stroke="#ffffff"
+              stroke-opacity="0.8600000000000001"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-07-22: 1 contribution</title>
+
+            <rect
+              x="723"
+              y="96"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#5b8cff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -5654,11 +5684,79 @@
           </g>
         
           <g>
-            <title>2026-08-13: 2 contributions</title>
+            <title>2026-07-28: 1 contribution</title>
 
             <rect
-              x="768"
-              y="111"
+              x="738"
+              y="81"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#5b8cff"
+              fill-opacity="0.5"
+              stroke="#ffffff"
+              stroke-opacity="0.6799999999999999"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-03: 2 contributions</title>
+
+            <rect
+              x="753"
+              y="66"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#5b8cff"
+              fill-opacity="0.68"
+              stroke="#ffffff"
+              stroke-opacity="0.8600000000000001"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-04: 1 contribution</title>
+
+            <rect
+              x="753"
+              y="81"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#8b7cff"
+              fill-opacity="0.5"
+              stroke="#ffffff"
+              stroke-opacity="0.6799999999999999"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-05: 2 contributions</title>
+
+            <rect
+              x="753"
+              y="96"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#c675ff"
+              fill-opacity="0.68"
+              stroke="#ffffff"
+              stroke-opacity="0.8600000000000001"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-07: 1 contribution</title>
+
+            <rect
+              x="753"
+              y="126"
               width="11"
               height="11"
               rx="2.5"
@@ -5671,15 +5769,15 @@
           </g>
         
           <g>
-            <title>2026-08-17: 1 contribution</title>
+            <title>2026-08-10: 1 contribution</title>
 
             <rect
-              x="783"
+              x="768"
               y="66"
               width="11"
               height="11"
               rx="2.5"
-              fill="#c675ff"
+              fill="#8b7cff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -5688,7 +5786,92 @@
           </g>
         
           <g>
-            <title>2026-08-21: 1 contribution</title>
+            <title>2026-08-11: 2 contributions</title>
+
+            <rect
+              x="768"
+              y="81"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#c675ff"
+              fill-opacity="0.68"
+              stroke="#ffffff"
+              stroke-opacity="0.8600000000000001"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-13: 4 contributions</title>
+
+            <rect
+              x="768"
+              y="111"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#ff8674"
+              fill-opacity="0.84"
+              stroke="#ffffff"
+              stroke-opacity="1"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-17: 3 contributions</title>
+
+            <rect
+              x="783"
+              y="66"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#c675ff"
+              fill-opacity="0.68"
+              stroke="#ffffff"
+              stroke-opacity="0.8600000000000001"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-18: 8 contributions</title>
+
+            <rect
+              x="783"
+              y="81"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#ff77b7"
+              fill-opacity="1"
+              stroke="#ffffff"
+              stroke-opacity="1"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-20: 7 contributions</title>
+
+            <rect
+              x="783"
+              y="111"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#ffd166"
+              fill-opacity="1"
+              stroke="#ffffff"
+              stroke-opacity="1"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-21: 5 contributions</title>
 
             <rect
               x="783"
@@ -5697,9 +5880,9 @@
               height="11"
               rx="2.5"
               fill="#62d9c7"
-              fill-opacity="0.5"
+              fill-opacity="1"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="1"
               stroke-width="0.7"
             />
           </g>
@@ -5714,9 +5897,9 @@
               height="11"
               rx="2.5"
               fill="#ff77b7"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5731,9 +5914,9 @@
               height="11"
               rx="2.5"
               fill="#62d9c7"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5841,7 +6024,7 @@
           </g>
         
           <g>
-            <title>2026-09-03: 1 contribution</title>
+            <title>2026-09-03: 3 contributions</title>
 
             <rect
               x="813"
@@ -5850,9 +6033,9 @@
               height="11"
               rx="2.5"
               fill="#55c8ff"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
@@ -5892,7 +6075,7 @@
           </g>
         
           <g>
-            <title>2026-09-07: 1 contribution</title>
+            <title>2026-09-07: 2 contributions</title>
 
             <rect
               x="828"
@@ -5901,15 +6084,15 @@
               height="11"
               rx="2.5"
               fill="#ffd166"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
         
           <g>
-            <title>2026-09-08: 13 contributions</title>
+            <title>2026-09-08: 18 contributions</title>
 
             <rect
               x="828"
@@ -5926,7 +6109,7 @@
           </g>
         
           <g>
-            <title>2026-09-09: 1 contribution</title>
+            <title>2026-09-09: 2 contributions</title>
 
             <rect
               x="828"
@@ -5935,15 +6118,15 @@
               height="11"
               rx="2.5"
               fill="#55c8ff"
-              fill-opacity="0.5"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
         
           <g>
-            <title>2026-09-10: 1 contribution</title>
+            <title>2026-09-10: 8 contributions</title>
 
             <rect
               x="828"
@@ -5952,9 +6135,9 @@
               height="11"
               rx="2.5"
               fill="#5b8cff"
-              fill-opacity="0.5"
+              fill-opacity="1"
               stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
+              stroke-opacity="1"
               stroke-width="0.7"
             />
           </g>
