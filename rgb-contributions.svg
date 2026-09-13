@@ -140,7 +140,7 @@
     font-size="15"
     font-weight="600"
   >
-    178 contributions in the last year
+    180 contributions in the last year
   </text>
 
   <g
@@ -153,51 +153,51 @@
           Sep
         </text>
       
-        <text x="108" y="40">
+        <text x="93" y="40">
           Oct
         </text>
       
-        <text x="168" y="40">
+        <text x="153" y="40">
           Nov
         </text>
       
-        <text x="243" y="40">
+        <text x="228" y="40">
           Dec
         </text>
       
-        <text x="303" y="40">
+        <text x="288" y="40">
           Jan
         </text>
       
-        <text x="363" y="40">
+        <text x="348" y="40">
           Feb
         </text>
       
-        <text x="423" y="40">
+        <text x="408" y="40">
           Mar
         </text>
       
-        <text x="498" y="40">
+        <text x="483" y="40">
           Apr
         </text>
       
-        <text x="558" y="40">
+        <text x="543" y="40">
           May
         </text>
       
-        <text x="633" y="40">
+        <text x="618" y="40">
           Jun
         </text>
       
-        <text x="693" y="40">
+        <text x="678" y="40">
           Jul
         </text>
       
-        <text x="753" y="40">
+        <text x="738" y="40">
           Aug
         </text>
       
-        <text x="828" y="40">
+        <text x="813" y="40">
           Sep
         </text>
       
@@ -4976,84 +4976,6 @@
           stroke-width="0.35"
         />
       
-        <rect
-          x="828"
-          y="66"
-          width="11"
-          height="11"
-          rx="2.5"
-          fill="#30363d"
-          fill-opacity="0.13"
-          stroke="#8b949e"
-          stroke-opacity="0.14"
-          stroke-width="0.35"
-        />
-      
-        <rect
-          x="828"
-          y="81"
-          width="11"
-          height="11"
-          rx="2.5"
-          fill="#30363d"
-          fill-opacity="0.13"
-          stroke="#8b949e"
-          stroke-opacity="0.14"
-          stroke-width="0.35"
-        />
-      
-        <rect
-          x="828"
-          y="96"
-          width="11"
-          height="11"
-          rx="2.5"
-          fill="#30363d"
-          fill-opacity="0.13"
-          stroke="#8b949e"
-          stroke-opacity="0.14"
-          stroke-width="0.35"
-        />
-      
-        <rect
-          x="828"
-          y="111"
-          width="11"
-          height="11"
-          rx="2.5"
-          fill="#30363d"
-          fill-opacity="0.13"
-          stroke="#8b949e"
-          stroke-opacity="0.14"
-          stroke-width="0.35"
-        />
-      
-        <rect
-          x="828"
-          y="126"
-          width="11"
-          height="11"
-          rx="2.5"
-          fill="#30363d"
-          fill-opacity="0.13"
-          stroke="#8b949e"
-          stroke-opacity="0.14"
-          stroke-width="0.35"
-        />
-      
-        <rect
-          x="828"
-          y="141"
-          width="11"
-          height="11"
-          rx="2.5"
-          fill="#30363d"
-          fill-opacity="0.13"
-          stroke="#8b949e"
-          stroke-opacity="0.14"
-          stroke-width="0.35"
-        />
-      
     </g>
 
     <!-- Layer 2: one travelling RGB wave -->
@@ -5088,12 +5010,12 @@
             <title>2025-10-02: 7 contributions</title>
 
             <rect
-              x="93"
+              x="78"
               y="111"
               width="11"
               height="11"
               rx="2.5"
-              fill="#55c8ff"
+              fill="#62d9c7"
               fill-opacity="1"
               stroke="#ffffff"
               stroke-opacity="1"
@@ -5105,12 +5027,12 @@
             <title>2025-10-16: 3 contributions</title>
 
             <rect
-              x="123"
+              x="108"
               y="111"
               width="11"
               height="11"
               rx="2.5"
-              fill="#8b7cff"
+              fill="#5b8cff"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -5122,76 +5044,8 @@
             <title>2025-10-17: 1 contribution</title>
 
             <rect
-              x="123"
+              x="108"
               y="126"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#c675ff"
-              fill-opacity="0.5"
-              stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2025-10-29: 1 contribution</title>
-
-            <rect
-              x="153"
-              y="96"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#c675ff"
-              fill-opacity="0.5"
-              stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2025-10-30: 4 contributions</title>
-
-            <rect
-              x="153"
-              y="111"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#ff77b7"
-              fill-opacity="0.84"
-              stroke="#ffffff"
-              stroke-opacity="1"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2025-10-31: 1 contribution</title>
-
-            <rect
-              x="153"
-              y="126"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#ff8674"
-              fill-opacity="0.5"
-              stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2025-11-03: 1 contribution</title>
-
-            <rect
-              x="168"
-              y="66"
               width="11"
               height="11"
               rx="2.5"
@@ -5204,49 +5058,15 @@
           </g>
         
           <g>
-            <title>2025-11-05: 2 contributions</title>
+            <title>2025-10-29: 1 contribution</title>
 
             <rect
-              x="168"
+              x="138"
               y="96"
               width="11"
               height="11"
               rx="2.5"
-              fill="#ff77b7"
-              fill-opacity="0.68"
-              stroke="#ffffff"
-              stroke-opacity="0.8600000000000001"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2025-11-06: 2 contributions</title>
-
-            <rect
-              x="168"
-              y="111"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#ff8674"
-              fill-opacity="0.68"
-              stroke="#ffffff"
-              stroke-opacity="0.8600000000000001"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2025-12-08: 1 contribution</title>
-
-            <rect
-              x="243"
-              y="66"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#62d9c7"
+              fill="#8b7cff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -5255,11 +5075,45 @@
           </g>
         
           <g>
-            <title>2025-12-10: 1 contribution</title>
+            <title>2025-10-30: 4 contributions</title>
 
             <rect
-              x="243"
-              y="96"
+              x="138"
+              y="111"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#c675ff"
+              fill-opacity="0.84"
+              stroke="#ffffff"
+              stroke-opacity="1"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2025-10-31: 1 contribution</title>
+
+            <rect
+              x="138"
+              y="126"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#ff77b7"
+              fill-opacity="0.5"
+              stroke="#ffffff"
+              stroke-opacity="0.6799999999999999"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2025-11-03: 1 contribution</title>
+
+            <rect
+              x="153"
+              y="66"
               width="11"
               height="11"
               rx="2.5"
@@ -5272,49 +5126,15 @@
           </g>
         
           <g>
-            <title>2025-12-19: 1 contribution</title>
+            <title>2025-11-05: 2 contributions</title>
 
             <rect
-              x="258"
-              y="126"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#ff77b7"
-              fill-opacity="0.5"
-              stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2026-01-14: 1 contribution</title>
-
-            <rect
-              x="318"
+              x="153"
               y="96"
               width="11"
               height="11"
               rx="2.5"
-              fill="#ffd166"
-              fill-opacity="0.5"
-              stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2026-01-20: 2 contributions</title>
-
-            <rect
-              x="333"
-              y="81"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#ffd166"
+              fill="#c675ff"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -5323,10 +5143,44 @@
           </g>
         
           <g>
-            <title>2026-01-28: 1 contribution</title>
+            <title>2025-11-06: 2 contributions</title>
 
             <rect
-              x="348"
+              x="153"
+              y="111"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#ff77b7"
+              fill-opacity="0.68"
+              stroke="#ffffff"
+              stroke-opacity="0.8600000000000001"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2025-12-08: 1 contribution</title>
+
+            <rect
+              x="228"
+              y="66"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#ffd166"
+              fill-opacity="0.5"
+              stroke="#ffffff"
+              stroke-opacity="0.6799999999999999"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2025-12-10: 1 contribution</title>
+
+            <rect
+              x="228"
               y="96"
               width="11"
               height="11"
@@ -5340,15 +5194,83 @@
           </g>
         
           <g>
+            <title>2025-12-19: 1 contribution</title>
+
+            <rect
+              x="243"
+              y="126"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#c675ff"
+              fill-opacity="0.5"
+              stroke="#ffffff"
+              stroke-opacity="0.6799999999999999"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-01-14: 1 contribution</title>
+
+            <rect
+              x="303"
+              y="96"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#ff8674"
+              fill-opacity="0.5"
+              stroke="#ffffff"
+              stroke-opacity="0.6799999999999999"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-01-20: 2 contributions</title>
+
+            <rect
+              x="318"
+              y="81"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#ff8674"
+              fill-opacity="0.68"
+              stroke="#ffffff"
+              stroke-opacity="0.8600000000000001"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-01-28: 1 contribution</title>
+
+            <rect
+              x="333"
+              y="96"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#62d9c7"
+              fill-opacity="0.5"
+              stroke="#ffffff"
+              stroke-opacity="0.6799999999999999"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
             <title>2026-02-05: 2 contributions</title>
 
             <rect
-              x="363"
+              x="348"
               y="111"
               width="11"
               height="11"
               rx="2.5"
-              fill="#8b7cff"
+              fill="#5b8cff"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -5360,12 +5282,12 @@
             <title>2026-02-10: 1 contribution</title>
 
             <rect
-              x="378"
+              x="363"
               y="81"
               width="11"
               height="11"
               rx="2.5"
-              fill="#5b8cff"
+              fill="#55c8ff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -5377,12 +5299,12 @@
             <title>2026-04-09: 1 contribution</title>
 
             <rect
-              x="498"
+              x="483"
               y="111"
               width="11"
               height="11"
               rx="2.5"
-              fill="#c675ff"
+              fill="#8b7cff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -5394,12 +5316,12 @@
             <title>2026-04-10: 1 contribution</title>
 
             <rect
-              x="498"
+              x="483"
               y="126"
               width="11"
               height="11"
               rx="2.5"
-              fill="#ff77b7"
+              fill="#c675ff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -5411,12 +5333,12 @@
             <title>2026-04-20: 1 contribution</title>
 
             <rect
-              x="528"
+              x="513"
               y="66"
               width="11"
               height="11"
               rx="2.5"
-              fill="#8b7cff"
+              fill="#5b8cff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -5428,12 +5350,12 @@
             <title>2026-06-02: 7 contributions</title>
 
             <rect
-              x="618"
+              x="603"
               y="81"
               width="11"
               height="11"
               rx="2.5"
-              fill="#5b8cff"
+              fill="#55c8ff"
               fill-opacity="1"
               stroke="#ffffff"
               stroke-opacity="1"
@@ -5445,12 +5367,12 @@
             <title>2026-06-03: 3 contributions</title>
 
             <rect
-              x="618"
+              x="603"
               y="96"
               width="11"
               height="11"
               rx="2.5"
-              fill="#8b7cff"
+              fill="#5b8cff"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -5462,12 +5384,12 @@
             <title>2026-06-08: 6 contributions</title>
 
             <rect
-              x="633"
+              x="618"
               y="66"
               width="11"
               height="11"
               rx="2.5"
-              fill="#5b8cff"
+              fill="#55c8ff"
               fill-opacity="1"
               stroke="#ffffff"
               stroke-opacity="1"
@@ -5479,8 +5401,25 @@
             <title>2026-06-09: 4 contributions</title>
 
             <rect
-              x="633"
+              x="618"
               y="81"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#5b8cff"
+              fill-opacity="0.84"
+              stroke="#ffffff"
+              stroke-opacity="1"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-06-10: 4 contributions</title>
+
+            <rect
+              x="618"
+              y="96"
               width="11"
               height="11"
               rx="2.5"
@@ -5493,24 +5432,24 @@
           </g>
         
           <g>
-            <title>2026-06-10: 4 contributions</title>
+            <title>2026-06-12: 3 contributions</title>
 
             <rect
-              x="633"
-              y="96"
+              x="618"
+              y="126"
               width="11"
               height="11"
               rx="2.5"
-              fill="#c675ff"
-              fill-opacity="0.84"
+              fill="#ff77b7"
+              fill-opacity="0.68"
               stroke="#ffffff"
-              stroke-opacity="1"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
         
           <g>
-            <title>2026-06-12: 3 contributions</title>
+            <title>2026-06-19: 3 contributions</title>
 
             <rect
               x="633"
@@ -5527,32 +5466,15 @@
           </g>
         
           <g>
-            <title>2026-06-19: 3 contributions</title>
-
-            <rect
-              x="648"
-              y="126"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#ffd166"
-              fill-opacity="0.68"
-              stroke="#ffffff"
-              stroke-opacity="0.8600000000000001"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
             <title>2026-06-22: 2 contributions</title>
 
             <rect
-              x="663"
+              x="648"
               y="66"
               width="11"
               height="11"
               rx="2.5"
-              fill="#c675ff"
+              fill="#8b7cff"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -5564,12 +5486,12 @@
             <title>2026-06-25: 3 contributions</title>
 
             <rect
-              x="663"
+              x="648"
               y="111"
               width="11"
               height="11"
               rx="2.5"
-              fill="#ffd166"
+              fill="#ff8674"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -5581,8 +5503,25 @@
             <title>2026-06-29: 6 contributions</title>
 
             <rect
-              x="678"
+              x="663"
               y="66"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#c675ff"
+              fill-opacity="1"
+              stroke="#ffffff"
+              stroke-opacity="1"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-06-30: 6 contributions</title>
+
+            <rect
+              x="663"
+              y="81"
               width="11"
               height="11"
               rx="2.5"
@@ -5595,32 +5534,15 @@
           </g>
         
           <g>
-            <title>2026-06-30: 6 contributions</title>
-
-            <rect
-              x="678"
-              y="81"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#ff8674"
-              fill-opacity="1"
-              stroke="#ffffff"
-              stroke-opacity="1"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
             <title>2026-07-01: 2 contributions</title>
 
             <rect
-              x="678"
+              x="663"
               y="96"
               width="11"
               height="11"
               rx="2.5"
-              fill="#ffd166"
+              fill="#ff8674"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -5632,12 +5554,12 @@
             <title>2026-07-06: 4 contributions</title>
 
             <rect
-              x="693"
+              x="678"
               y="66"
               width="11"
               height="11"
               rx="2.5"
-              fill="#ff8674"
+              fill="#ff77b7"
               fill-opacity="0.84"
               stroke="#ffffff"
               stroke-opacity="1"
@@ -5649,12 +5571,12 @@
             <title>2026-07-07: 1 contribution</title>
 
             <rect
-              x="693"
+              x="678"
               y="81"
               width="11"
               height="11"
               rx="2.5"
-              fill="#ffd166"
+              fill="#ff8674"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -5666,12 +5588,12 @@
             <title>2026-07-20: 3 contributions</title>
 
             <rect
-              x="723"
+              x="708"
               y="66"
               width="11"
               height="11"
               rx="2.5"
-              fill="#62d9c7"
+              fill="#ffd166"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -5683,12 +5605,12 @@
             <title>2026-07-22: 1 contribution</title>
 
             <rect
-              x="723"
+              x="708"
               y="96"
               width="11"
               height="11"
               rx="2.5"
-              fill="#5b8cff"
+              fill="#55c8ff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -5698,6 +5620,40 @@
         
           <g>
             <title>2026-07-28: 1 contribution</title>
+
+            <rect
+              x="723"
+              y="81"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#55c8ff"
+              fill-opacity="0.5"
+              stroke="#ffffff"
+              stroke-opacity="0.6799999999999999"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-03: 2 contributions</title>
+
+            <rect
+              x="738"
+              y="66"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#55c8ff"
+              fill-opacity="0.68"
+              stroke="#ffffff"
+              stroke-opacity="0.8600000000000001"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-04: 1 contribution</title>
 
             <rect
               x="738"
@@ -5714,49 +5670,15 @@
           </g>
         
           <g>
-            <title>2026-08-03: 2 contributions</title>
-
-            <rect
-              x="753"
-              y="66"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#5b8cff"
-              fill-opacity="0.68"
-              stroke="#ffffff"
-              stroke-opacity="0.8600000000000001"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2026-08-04: 1 contribution</title>
-
-            <rect
-              x="753"
-              y="81"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#8b7cff"
-              fill-opacity="0.5"
-              stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
             <title>2026-08-05: 2 contributions</title>
 
             <rect
-              x="753"
+              x="738"
               y="96"
               width="11"
               height="11"
               rx="2.5"
-              fill="#c675ff"
+              fill="#8b7cff"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -5768,12 +5690,12 @@
             <title>2026-08-07: 1 contribution</title>
 
             <rect
-              x="753"
+              x="738"
               y="126"
               width="11"
               height="11"
               rx="2.5"
-              fill="#ff8674"
+              fill="#ff77b7"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -5785,12 +5707,12 @@
             <title>2026-08-10: 1 contribution</title>
 
             <rect
-              x="768"
+              x="753"
               y="66"
               width="11"
               height="11"
               rx="2.5"
-              fill="#8b7cff"
+              fill="#5b8cff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -5802,12 +5724,12 @@
             <title>2026-08-11: 2 contributions</title>
 
             <rect
-              x="768"
+              x="753"
               y="81"
               width="11"
               height="11"
               rx="2.5"
-              fill="#c675ff"
+              fill="#8b7cff"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -5819,12 +5741,12 @@
             <title>2026-08-13: 4 contributions</title>
 
             <rect
-              x="768"
+              x="753"
               y="111"
               width="11"
               height="11"
               rx="2.5"
-              fill="#ff8674"
+              fill="#ff77b7"
               fill-opacity="0.84"
               stroke="#ffffff"
               stroke-opacity="1"
@@ -5834,6 +5756,74 @@
         
           <g>
             <title>2026-08-17: 3 contributions</title>
+
+            <rect
+              x="768"
+              y="66"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#8b7cff"
+              fill-opacity="0.68"
+              stroke="#ffffff"
+              stroke-opacity="0.8600000000000001"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-18: 8 contributions</title>
+
+            <rect
+              x="768"
+              y="81"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#c675ff"
+              fill-opacity="1"
+              stroke="#ffffff"
+              stroke-opacity="1"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-20: 7 contributions</title>
+
+            <rect
+              x="768"
+              y="111"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#ff8674"
+              fill-opacity="1"
+              stroke="#ffffff"
+              stroke-opacity="1"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-21: 5 contributions</title>
+
+            <rect
+              x="768"
+              y="126"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#ffd166"
+              fill-opacity="1"
+              stroke="#ffffff"
+              stroke-opacity="1"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-24: 3 contributions</title>
 
             <rect
               x="783"
@@ -5850,24 +5840,7 @@
           </g>
         
           <g>
-            <title>2026-08-18: 8 contributions</title>
-
-            <rect
-              x="783"
-              y="81"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#ff77b7"
-              fill-opacity="1"
-              stroke="#ffffff"
-              stroke-opacity="1"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2026-08-20: 7 contributions</title>
+            <title>2026-08-27: 3 contributions</title>
 
             <rect
               x="783"
@@ -5876,57 +5849,6 @@
               height="11"
               rx="2.5"
               fill="#ffd166"
-              fill-opacity="1"
-              stroke="#ffffff"
-              stroke-opacity="1"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2026-08-21: 5 contributions</title>
-
-            <rect
-              x="783"
-              y="126"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#62d9c7"
-              fill-opacity="1"
-              stroke="#ffffff"
-              stroke-opacity="1"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2026-08-24: 3 contributions</title>
-
-            <rect
-              x="798"
-              y="66"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#ff77b7"
-              fill-opacity="0.68"
-              stroke="#ffffff"
-              stroke-opacity="0.8600000000000001"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
-            <title>2026-08-27: 3 contributions</title>
-
-            <rect
-              x="798"
-              y="111"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#62d9c7"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -5938,8 +5860,25 @@
             <title>2026-08-28: 1 contribution</title>
 
             <rect
-              x="798"
+              x="783"
               y="126"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#62d9c7"
+              fill-opacity="0.5"
+              stroke="#ffffff"
+              stroke-opacity="0.6799999999999999"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-08-29: 1 contribution</title>
+
+            <rect
+              x="783"
+              y="141"
               width="11"
               height="11"
               rx="2.5"
@@ -5952,15 +5891,15 @@
           </g>
         
           <g>
-            <title>2026-08-29: 1 contribution</title>
+            <title>2026-08-30: 1 contribution</title>
 
             <rect
               x="798"
-              y="141"
+              y="51"
               width="11"
               height="11"
               rx="2.5"
-              fill="#5b8cff"
+              fill="#c675ff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -5969,11 +5908,11 @@
           </g>
         
           <g>
-            <title>2026-08-30: 1 contribution</title>
+            <title>2026-08-31: 1 contribution</title>
 
             <rect
-              x="813"
-              y="51"
+              x="798"
+              y="66"
               width="11"
               height="11"
               rx="2.5"
@@ -5986,11 +5925,11 @@
           </g>
         
           <g>
-            <title>2026-08-31: 1 contribution</title>
+            <title>2026-09-01: 1 contribution</title>
 
             <rect
-              x="813"
-              y="66"
+              x="798"
+              y="81"
               width="11"
               height="11"
               rx="2.5"
@@ -6003,32 +5942,15 @@
           </g>
         
           <g>
-            <title>2026-09-01: 1 contribution</title>
-
-            <rect
-              x="813"
-              y="81"
-              width="11"
-              height="11"
-              rx="2.5"
-              fill="#ffd166"
-              fill-opacity="0.5"
-              stroke="#ffffff"
-              stroke-opacity="0.6799999999999999"
-              stroke-width="0.7"
-            />
-          </g>
-        
-          <g>
             <title>2026-09-02: 1 contribution</title>
 
             <rect
-              x="813"
+              x="798"
               y="96"
               width="11"
               height="11"
               rx="2.5"
-              fill="#62d9c7"
+              fill="#ffd166"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -6040,12 +5962,12 @@
             <title>2026-09-03: 3 contributions</title>
 
             <rect
-              x="813"
+              x="798"
               y="111"
               width="11"
               height="11"
               rx="2.5"
-              fill="#55c8ff"
+              fill="#62d9c7"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -6057,12 +5979,12 @@
             <title>2026-09-04: 1 contribution</title>
 
             <rect
-              x="813"
+              x="798"
               y="126"
               width="11"
               height="11"
               rx="2.5"
-              fill="#5b8cff"
+              fill="#55c8ff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -6074,12 +5996,12 @@
             <title>2026-09-05: 1 contribution</title>
 
             <rect
-              x="813"
+              x="798"
               y="141"
               width="11"
               height="11"
               rx="2.5"
-              fill="#8b7cff"
+              fill="#5b8cff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
@@ -6091,12 +6013,12 @@
             <title>2026-09-07: 2 contributions</title>
 
             <rect
-              x="828"
+              x="813"
               y="66"
               width="11"
               height="11"
               rx="2.5"
-              fill="#ffd166"
+              fill="#ff8674"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -6108,12 +6030,12 @@
             <title>2026-09-08: 18 contributions</title>
 
             <rect
-              x="828"
+              x="813"
               y="81"
               width="11"
               height="11"
               rx="2.5"
-              fill="#62d9c7"
+              fill="#ffd166"
               fill-opacity="1"
               stroke="#ffffff"
               stroke-opacity="1"
@@ -6125,12 +6047,12 @@
             <title>2026-09-09: 2 contributions</title>
 
             <rect
-              x="828"
+              x="813"
               y="96"
               width="11"
               height="11"
               rx="2.5"
-              fill="#55c8ff"
+              fill="#62d9c7"
               fill-opacity="0.68"
               stroke="#ffffff"
               stroke-opacity="0.8600000000000001"
@@ -6142,12 +6064,12 @@
             <title>2026-09-10: 8 contributions</title>
 
             <rect
-              x="828"
+              x="813"
               y="111"
               width="11"
               height="11"
               rx="2.5"
-              fill="#5b8cff"
+              fill="#55c8ff"
               fill-opacity="1"
               stroke="#ffffff"
               stroke-opacity="1"
@@ -6159,15 +6081,32 @@
             <title>2026-09-11: 1 contribution</title>
 
             <rect
-              x="828"
+              x="813"
               y="126"
               width="11"
               height="11"
               rx="2.5"
-              fill="#8b7cff"
+              fill="#5b8cff"
               fill-opacity="0.5"
               stroke="#ffffff"
               stroke-opacity="0.6799999999999999"
+              stroke-width="0.7"
+            />
+          </g>
+        
+          <g>
+            <title>2026-09-13: 2 contributions</title>
+
+            <rect
+              x="828"
+              y="51"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="#ff8674"
+              fill-opacity="0.68"
+              stroke="#ffffff"
+              stroke-opacity="0.8600000000000001"
               stroke-width="0.7"
             />
           </g>
