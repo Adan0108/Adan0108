@@ -5041,6 +5041,19 @@
           stroke-width="0.35"
         />
       
+        <rect
+          x="828"
+          y="141"
+          width="11"
+          height="11"
+          rx="2.5"
+          fill="#30363d"
+          fill-opacity="0.13"
+          stroke="#8b949e"
+          stroke-opacity="0.14"
+          stroke-width="0.35"
+        />
+      
     </g>
 
     <!-- Layer 2: one travelling RGB wave -->
